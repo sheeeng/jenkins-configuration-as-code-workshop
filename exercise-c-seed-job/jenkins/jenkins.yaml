@@ -1,0 +1,43 @@
+configuration-as-code:
+  version: 1
+  deprecated: warn
+  restricted: reject
+
+jenkins:
+  systemMessage: |-
+    Welcome to Jenkins!    ٩(◕‿◕)۶
+    This Jenkins was configured with Jenkins Configuration as Code plugin.
+    You can freely modify its configuration without repercussion.
+  authorizationStrategy:
+    globalMatrix:
+      grantedPermissions:
+        - "Job/Build:authenticated"
+        - "Job/Cancel:authenticated"
+        - "Job/Read:authenticated"
+        - "Overall/Administer:Acme Superusers"
+        - "Overall/Read:authenticated"
+        - "View/Read:authenticated"
+  securityRealm:
+    ldap:
+      configurations:
+      - groupSearchFilter: "(& (cn={0}) (objectclass=posixGroup) )"
+        inhibitInferRootDN: false
+        managerDN: "cn=service,ou=Users,dc=acme,dc=local"
+        managerPasswordSecret: ${LDAP_SERVICE_PASSWORD}
+        rootDN: "dc=acme,dc=local"
+        server: "ldap://slapd:389"
+      disableMailAddressResolver: false
+      disableRolePrefixing: true
+      groupIdStrategy: "caseInsensitive"
+      userIdStrategy: "caseInsensitive"
+
+security:
+  queueItemAuthenticator:
+    authenticators:
+    - global:
+        strategy: "systemAuthorizationStrategy"
+
+unclassified:
+  location:
+    adminAddress: "Leonard Sheng Sheng Lee <leonard.sheng.sheng.lee@gmail.com>"
+    url: "https://localhost:8080"

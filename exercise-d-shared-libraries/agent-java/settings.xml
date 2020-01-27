@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings>
+  <servers>
+    <server>
+      <id>maven-releases</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+    <server>
+      <id>maven-snapshots</id>
+      <username>admin</username>
+      <password>admin123</password>
+    </server>
+  </servers>
+
+  <profiles>
+    <profile>
+      <id>nexus</id>
+      <properties>
+        <!-- How to specify maven's distributionManagement organisation wide? -->
+        <!-- https://stackoverflow.com/a/55615274 -->
+        <altSnapshotDeploymentRepository>maven-snapshots::default::http://nexus:8081/repository/maven-snapshots/</altSnapshotDeploymentRepository>
+        <altReleaseDeploymentRepository>maven-releases::default::http://nexus:8081/repository/maven-releases/</altReleaseDeploymentRepository>
+      </properties>
+      <repositories>
+        <repository>
+          <id>maven-central</id>
+          <url>http://nexus:8081/repository/maven-central/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>maven-central</id>
+          <url>http://nexus:8081/repository/maven-central/</url>
+          <releases><enabled>true</enabled></releases>
+          <snapshots><enabled>true</enabled></snapshots>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+  <activeProfiles>
+    <activeProfile>nexus</activeProfile>
+  </activeProfiles>
+</settings>

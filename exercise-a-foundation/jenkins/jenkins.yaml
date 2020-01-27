@@ -1,0 +1,10 @@
+configuration-as-code:
+  version: 1
+  deprecated: warn
+  restricted: reject
+
+jenkins:
+  systemMessage: |-
+    Welcome to Jenkins!    ٩(◕‿◕)۶
+    This Jenkins was configured with Jenkins Configuration as Code plugin.
+    You can freely modify its configuration without repercussion.

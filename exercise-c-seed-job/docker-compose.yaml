@@ -1,0 +1,42 @@
+version: '3.7'
+
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+    ports:
+      - 8080:8080
+      - 50000:50000
+    environment:
+      - TZ=Europe/Oslo
+    volumes:
+      - jenkins_home:/var/jenkins_home
+    secrets:
+      - JENKINS_SSH_PRIVATE_KEY
+    env_file: ./jenkins/secrets.env
+    depends_on:
+      - slapd
+
+  slapd:
+    build:
+      context: ./slapd
+    ports:
+      - 389:389
+      - 636:636
+
+  phpldapadmin:
+    image: osixia/phpldapadmin:0.8.0
+    environment:
+      PHPLDAPADMIN_LDAP_HOSTS: slapd
+      PHPLDAPADMIN_HTTPS: 'false'
+    ports:
+      - 8090:80
+    depends_on:
+      - slapd
+
+secrets:
+  JENKINS_SSH_PRIVATE_KEY:
+    file: ~/.ssh/id_rsa
+
+volumes:
+  jenkins_home:
