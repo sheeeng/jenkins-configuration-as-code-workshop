@@ -1,10 +1,10 @@
-# Exercises
+# Exercise A - Foundation
 
 We will be working with these files in this exercise.
 
-- [exercise-a-foundation/jenkins/Dockerfile](exercise-a-foundation/jenkins/Dockerfile)
-- [exercise-a-foundation/jenkins/jenkins.yaml](exercise-a-foundation/jenkins/jenkins.yaml)
-- [exercise-a-foundation/jenkins/plugins.txt](exercise-a-foundation/jenkins/plugins.txt)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/plugins.txt](jenkins/plugins.txt)
 
 ## Task: Review Administrative Monitors (See Upper Right Square Numeric Red Box)
 

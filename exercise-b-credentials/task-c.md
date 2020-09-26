@@ -1,11 +1,11 @@
-# Exercises
+# Exercise B - Credentials
 
 We will be working with these files in this exercise.
 
-- [exercise-b-credentials/docker-compose.yaml](exercise-b-credentials/docker-compose.yaml)
-- [exercise-b-credentials/jenkins/Dockerfile](exercise-a-credentials/jenkins/Dockerfile)
-- [exercise-b-credentials/jenkins/jenkins.yaml](exercise-b-credentials/jenkins/jenkins.yaml)
-- [exercise-b-credentials/jenkins/secrets.env](exercise-b-credentials/jenkins/secrets.env)
+- [docker-compose.yaml](docker-compose.yaml)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/secrets.env](jenkins/secrets.env)
 
 The below section will explain how to configure the credentials options for Jenkins through Jenkins Configuration as Code (JCasC).
 
@@ -15,7 +15,7 @@ Multiple Security Realms are not supported, when we last checked in September 20
 
 ## Task: Use Lightweight Directory Access Protocol (LDAP)
 
-- Modify [exercise-b-credentials/docker-compose.yaml](exercise-b-credentials/docker-compose.yaml) to use LDAP directory.
+- Modify [docker-compose.yaml](docker-compose.yaml) to use LDAP directory.
 
 ```patch
 --- a/exercise-b-credentials/docker-compose.yaml
@@ -78,7 +78,7 @@ Multiple Security Realms are not supported, when we last checked in September 20
 ---> Create new entry here
 ```
 
-- Modify [exercise-b-credentials/jenkins/jenkins.yaml](exercise-b-credentials/jenkins/jenkins.yaml) to use LDAP directory.
+- Modify [jenkins/jenkins.yaml](jenkins/jenkins.yaml) to use LDAP directory.
 
 ```patch
 --- a/exercise-b-credentials/jenkins/jenkins.yaml

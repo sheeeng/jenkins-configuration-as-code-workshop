@@ -1,10 +1,10 @@
-# Exercises
+# Exercise D - Shared Libraries
 
 We will be working with these files in this exercise.
 
-- [exercise-d-shared-libraries/docker-compose.yaml](exercise-d-shared-libraries/docker-compose.yaml)
-- [exercise-d-shared-libraries/jenkins/jenkins.yaml](exercise-d-shared-libraries/jenkins/jenkins.yaml)
-- [exercise-d-shared-libraries/jenkins/secrets.env](exercise-d-shared-libraries/jenkins/secrets.env)
+- [docker-compose.yaml](docker-compose.yaml)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/secrets.env](jenkins/secrets.env)
 
 ## Task: Configure Nexus
 

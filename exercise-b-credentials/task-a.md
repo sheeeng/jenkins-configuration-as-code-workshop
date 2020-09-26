@@ -1,11 +1,11 @@
-# Exercises
+# Exercise B - Credentials
 
 We will be working with these files in this exercise.
 
-- [exercise-b-credentials/docker-compose.yaml](exercise-b-credentials/docker-compose.yaml)
-- [exercise-b-credentials/jenkins/Dockerfile](exercise-a-credentials/jenkins/Dockerfile)
-- [exercise-b-credentials/jenkins/jenkins.yaml](exercise-b-credentials/jenkins/jenkins.yaml)
-- [exercise-b-credentials/jenkins/secrets.env](exercise-b-credentials/jenkins/secrets.env)
+- [docker-compose.yaml](docker-compose.yaml)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/secrets.env](jenkins/secrets.env)
 
 The below section will explain how to configure the credentials options for Jenkins through Jenkins Configuration as Code (JCasC).
 
@@ -25,7 +25,7 @@ NEXUS_USERNAME=admin
 NEXUS_USERPASSWORD=admin123
 ```
 
-- Modify the [exercise-b-credentials/docker-compose.yaml](exercise-b-credentials/docker-compose.yaml) file with the following example.
+- Modify the [docker-compose.yaml](docker-compose.yaml) file with the following example.
 
 These changes will mount our SSH private key and the `secrets.env` file.
 

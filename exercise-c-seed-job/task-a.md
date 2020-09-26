@@ -1,12 +1,12 @@
-# Exercises
+# Exercise C - Seed Job
 
 We will be working with these files in this exercise.
 
-- [exercise-c-seed-job/docker-compose.yaml](exercise-c-seed-job/docker-compose.yaml)
-- [exercise-c-seed-job/jenkins/Dockerfile](exercise-c-credentials/jenkins/Dockerfile)
-- [exercise-c-seed-job/jenkins/jenkins.yaml](exercise-c-seed-job/jenkins/jenkins.yaml)
-- [exercise-c-seed-job/jenkins/scriptApproval.xml](exercise-c-seed-job/jenkins/scriptApproval.xml)
-- [exercise-c-seed-job/jenkins/secrets.env](exercise-c-seed-job/jenkins/secrets.env)
+- [docker-compose.yaml](docker-compose.yaml)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/scriptApproval.xml](jenkins/scriptApproval.xml)
+- [jenkins/secrets.env](jenkins/secrets.env)
 
 ## Task: Configure GitHub Access
 
@@ -17,7 +17,7 @@ GITHUB_SSH_PRIVATE_KEY_USERNAME=changeit
 GITHUB_SSH_PRIVATE_KEY_PASSWORD=changeit
 ```
 
-- Add GitHub credential to [exercise-c-seed-job/jenkins/jenkins.yaml](exercise-c-seed-job/jenkins/jenkins.yaml).
+- Add GitHub credential to [jenkins/jenkins.yaml](jenkins/jenkins.yaml).
 
 ```patch
 --- a/exercise-c-seed-job/jenkins/jenkins.yaml

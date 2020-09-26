@@ -1,10 +1,10 @@
-# Exercises
+# Exercise A - Foundation
 
 We will be working with these files in this exercise.
 
-- [exercise-a-foundation/jenkins/Dockerfile](exercise-a-foundation/jenkins/Dockerfile)
-- [exercise-a-foundation/jenkins/jenkins.yaml](exercise-a-foundation/jenkins/jenkins.yaml)
-- [exercise-a-foundation/jenkins/plugins.txt](exercise-a-foundation/jenkins/plugins.txt)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/plugins.txt](jenkins/plugins.txt)
 
 ## Task: Use Jenkins Configuration as Code (JCasC) Plugin
 
@@ -18,7 +18,7 @@ It is important that we have included `configuration-as-code:1.35` in the config
 
 - Open [http://localhost:8080](http://localhost:8080) to access Jenkins.
 
-Was the configured system message, configured in [exercise-a-foundation/jenkins/jenkins.yaml](exercise-a-foundation/jenkins/jenkins.yaml) shown?
+Was the configured system message, configured in [jenkins/jenkins.yaml](jenkins/jenkins.yaml) shown?
 
 ### Task: Include Jenkins Configuration as Code (JCasC) Plugin
 
@@ -44,7 +44,7 @@ $ curl \
 configuration-as-code-1.43
 ```
 
-- Run `make` again __with__ `configuration-as-code:1.43` being included in [exercise-a-foundation/jenkins/plugins.txt](exercise-a-foundation/jenkins/plugins.txt).
+- Run `make` again __with__ `configuration-as-code:1.43` being included in [jenkins/plugins.txt](jenkins/plugins.txt).
 
 ```patch
 --- a/exercise-a-foundation/jenkins/plugins.txt
@@ -63,4 +63,4 @@ configuration-as-code-1.43
 
 - Open [http://localhost:8080](http://localhost:8080) to access Jenkins.
 
-Was the configured system message, configured in [exercise-a-foundation/jenkins/jenkins.yaml](exercise-a-foundation/jenkins/jenkins.yaml) shown now?
+Was the configured system message, configured in [jenkins/jenkins.yaml](jenkins/jenkins.yaml) shown now?

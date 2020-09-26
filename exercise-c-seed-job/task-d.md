@@ -1,16 +1,16 @@
-# Exercises
+# Exercise C - Seed Job
 
 We will be working with these files in this exercise.
 
-- [exercise-c-seed-job/docker-compose.yaml](exercise-c-seed-job/docker-compose.yaml)
-- [exercise-c-seed-job/jenkins/Dockerfile](exercise-c-credentials/jenkins/Dockerfile)
-- [exercise-c-seed-job/jenkins/jenkins.yaml](exercise-c-seed-job/jenkins/jenkins.yaml)
-- [exercise-c-seed-job/jenkins/scriptApproval.xml](exercise-c-seed-job/jenkins/scriptApproval.xml)
-- [exercise-c-seed-job/jenkins/secrets.env](exercise-c-seed-job/jenkins/secrets.env)
+- [docker-compose.yaml](docker-compose.yaml)
+- [jenkins/Dockerfile](jenkins/Dockerfile)
+- [jenkins/jenkins.yaml](jenkins/jenkins.yaml)
+- [jenkins/scriptApproval.xml](jenkins/scriptApproval.xml)
+- [jenkins/secrets.env](jenkins/secrets.env)
 
 ## Task: Include Initialization Scripts
 
-- Modify [exercise-c-seed-job/jenkins/Dockerfile](exercise-a-credentials/jenkins/Dockerfile) to include the initialization scripts.
+- Modify [jenkins/Dockerfile](jenkins/Dockerfile) to include the initialization scripts.
 
 ```patch
 --- a/exercise-c-seed-job/jenkins/Dockerfile
@@ -60,7 +60,7 @@ docker exec \
      bash -c "cat scriptApproval.xml && echo"
 ```
 
-- Create or modify [exercise-c-seed-job/jenkins/scriptApproval.xml](exercise-c-seed-job/jenkins/scriptApproval.xml) with the output from above command.
+- Create or modify [jenkins/scriptApproval.xml](jenkins/scriptApproval.xml) with the output from above command.
 
 ```xml
 <?xml version='1.1' encoding='UTF-8'?>
@@ -77,7 +77,7 @@ docker exec \
 </scriptApproval>
 ```
 
-- Include the [exercise-c-seed-job/jenkins/scriptApproval.xml](exercise-c-seed-job/jenkins/scriptApproval.xml) in [jenkins/Dockerfile](jenkins/Dockerfile).
+- Include the [jenkins/scriptApproval.xml](jenkins/scriptApproval.xml) in [jenkins/Dockerfile](jenkins/Dockerfile).
 
 ```patch
 --- a/exercise-c-seed-job/jenkins/Dockerfile
