@@ -56,7 +56,7 @@ docker exec \
      --interactive \
      --tty \
      --workdir /var/jenkins_home \
-     $(docker ps --filter name=jenkins_1 --quiet) \
+     $(docker ps --filter name="jenkins_1" --quiet) \
      bash -c "cat scriptApproval.xml && echo"
 ```
 

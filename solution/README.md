@@ -6,7 +6,7 @@
 
 ```bash
 docker exec -it \
-  $(docker ps --filter "name=solution_nexus_1" --quiet)  \
+  $(docker ps --filter "name=nexus" --quiet)  \
   bash -c "cat /nexus-data/admin.password && echo"
 ```
 
