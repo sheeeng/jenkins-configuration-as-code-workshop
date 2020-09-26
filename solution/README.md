@@ -33,7 +33,9 @@ Confirm password: admin123
 Configure Anonymous Access
 3 of 4
 
-Enabling anonymous access will allow unauthenticated downloads, browsing, and searching of repository content by default. Permissions for unauthenticated users can be changed by editing the roles assigned to the anonymous user.
+Enable anonymous access means that by default, users can search, browse and download components from repositories without credentials. Please consider the security implications for your organization.
+
+Disable anonymous access should be chosen with care, as it will require credentials for all users and/or build tools.
 
 More information
 [ ] Enable anonymous access
